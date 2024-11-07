@@ -4,7 +4,7 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 
-import Image from "next/image";
+import Image from "next/image"; // Ensure using next/image for optimization
 import { ToggleTheme as ToggleThemeComponent } from "../toggle-theme";
 
 const ToggleTheme = React.memo(ToggleThemeComponent);
@@ -24,11 +24,13 @@ export const Navbar = ({ className }: { className?: string }) => {
 				className="flex items-center gap-3 px-2 font-bold text-xl tracking-wide"
 				href="/"
 			>
+				{/* Use next/image for optimized image loading */}
 				<Image
 					src={"/assets/icons/logo.svg"}
 					alt="logo"
 					width={28}
 					height={28}
+					priority // Add priority for important images to load faster
 				/>
 				<h1>CareSync</h1>
 			</Link>

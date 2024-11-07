@@ -1,4 +1,5 @@
 import PatientForm from "@/components/forms/PatientForm";
+import { Navbar } from "@/components/layout/navbar";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,6 +7,7 @@ export default function Home() {
 	return (
 		<article className="flex h-full flex-1 gap-12">
 			<div className="flex w-1/2 flex-col gap-2 pr-24 pl-12">
+				<Navbar className="static px-0 pt-8 pb-20" />
 				<PatientForm />
 				<div className="flex justify-between">
 					<p className="text-accent text-sm">

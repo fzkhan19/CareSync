@@ -61,7 +61,6 @@ export default function PatientForm() {
 
 	return (
 		<>
-			<Navbar className="static px-0 pt-8 pb-20" />
 			<h1 className="font-bold text-3xl">Hi there 👋</h1>
 			<p className="text-muted">Get started with Appointments.</p>
 
