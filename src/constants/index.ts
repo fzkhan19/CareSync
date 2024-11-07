@@ -1,3 +1,5 @@
+import { Check, Hourglass, X } from "lucide-react";
+
 export const GenderOptions = ["male", "female", "other"];
 
 export const PatientFormDefaultValues = {
@@ -80,7 +82,7 @@ export const Doctors = [
 ];
 
 export const StatusIcon = {
-	scheduled: "/assets/icons/check.svg",
-	pending: "/assets/icons/pending.svg",
-	cancelled: "/assets/icons/cancelled.svg",
+	scheduled: Check,
+	pending: Hourglass,
+	cancelled: X,
 };

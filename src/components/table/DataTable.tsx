@@ -52,7 +52,7 @@ export function DataTable<TData, TValue>({
 	});
 
 	return (
-		<div className="z-10 w-full overflow-hidden rounded-lg border shadow-lg">
+		<div className="z-10 w-full overflow-hidden rounded-lg border border-muted dark:border-neutral-800">
 			<Table className="overflow-hidden rounded-lg">
 				<TableHeader className=" bg-muted dark:bg-neutral-900">
 					{table.getHeaderGroups().map((headerGroup) => (
@@ -81,7 +81,7 @@ export function DataTable<TData, TValue>({
 							<TableRow
 								key={row.id}
 								data-state={row.getIsSelected() && "selected"}
-								className="border-muted border-b dark:border-neutral-800"
+								className="border-muted border-b hover:bg-transparent dark:border-neutral-800"
 							>
 								{row.getVisibleCells().map((cell) => (
 									<TableCell key={cell.id}>

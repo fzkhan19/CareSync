@@ -106,10 +106,10 @@ export const AppointmentForm = ({
 						status: status as Status,
 						cancellationReason: values.cancellationReason,
 					},
+					timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
 					type,
 				};
 
-				//@ts-expect-error error out type
 				const updatedAppointment = await updateAppointment(appointmentToUpdate);
 
 				if (updatedAppointment) {
@@ -133,7 +133,7 @@ export const AppointmentForm = ({
 			buttonLabel = "Schedule Appointment";
 			break;
 		default:
-			buttonLabel = "Submit Apppointment";
+			buttonLabel = "Submit Appointment";
 	}
 
 	return (

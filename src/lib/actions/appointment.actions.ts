@@ -143,7 +143,7 @@ export const updateAppointment = async ({
 
 		if (!updatedAppointment) throw Error;
 
-		const smsMessage = `Greetings from CarePulse. ${
+		const smsMessage = `Greetings from CareSync. ${
 			type === "schedule"
 				? `Your appointment is confirmed for ${
 						// biome-ignore lint/style/noNonNullAssertion: <explanation>
