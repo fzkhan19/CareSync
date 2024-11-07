@@ -25,6 +25,11 @@ const config = {
 				mr: ["var(--font-mr)"],
 				in: ["var(--font-in)"],
 			},
+			backgroundImage: {
+				appointments: "url('/assets/appointments-bg.png')",
+				pending: "url('/assets/pending-bg.png')",
+				cancelled: "url('/assets/cancelled-bg.png')",
+			},
 			colors: {
 				dark: "#1b1b1b",
 				light: "#fff",

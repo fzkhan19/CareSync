@@ -4,12 +4,16 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 
+import { Label } from "@/components/ui/label";
 import Image from "next/image"; // Ensure using next/image for optimization
 import { ToggleTheme as ToggleThemeComponent } from "../toggle-theme";
 
 const ToggleTheme = React.memo(ToggleThemeComponent);
 
-export const Navbar = ({ className }: { className?: string }) => {
+export const Navbar = ({
+	className,
+	isAdmin,
+}: { className?: string; isAdmin?: boolean }) => {
 	return (
 		<header
 			className={cn(
@@ -35,7 +39,10 @@ export const Navbar = ({ className }: { className?: string }) => {
 				<h1>CareSync</h1>
 			</Link>
 
-			<ToggleTheme />
+			<div className="flex items-center gap-4">
+				{isAdmin && <Label> Admin Dashboard</Label>}
+				<ToggleTheme />
+			</div>
 		</header>
 	);
 };
